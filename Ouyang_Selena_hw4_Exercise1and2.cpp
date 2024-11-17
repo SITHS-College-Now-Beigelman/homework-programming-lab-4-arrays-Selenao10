@@ -23,9 +23,9 @@ int main() {
 	for (index = 0; index < 8; index++) //runs for eight values
 	    cin >> myArray[index]; //user input into array 
     
-    cout << "\nEven Number(s): " << endl << endl << endl;
-    
+    cout << "\nEven Number(s): " << endl;
 	filterEvens (myArray, index); //calls void function using myArray and index for the parameters
+	cout << endl << endl;
 	
 	
 	cout << "\nExercise 2";
@@ -91,7 +91,10 @@ Total number of cars sold at the entire dealership: 58
 Salesperson #4 sold the most cars
 Salesperson #4 sold 14 cars
 
-Exercise 4 
+Exercise 4
+Enter DNA nucleotides: 
+ACG TGCA
 
-
+RNA: 
+UGCACGU
 */
