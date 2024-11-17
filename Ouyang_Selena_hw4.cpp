@@ -3,13 +3,14 @@
 //11-12-24
 
 #include <iostream>
-#include <iomanip>
+#include <string>
+#include <istream>
 
 using namespace std;
 
 //Function prototype
 void filterEvens (int myArray[], int index); 
-void dna_to_rna (string nucleotides);
+void dna_to_rna(const string& DNA);
 
 int main() { 
     
@@ -50,16 +51,11 @@ int main() {
    
 	
 	
-	cout <<"\nExercise 4";
-	string DNA;
-	cin >> DNA;
-	dna_to_rna (DNA);
-	
-	
-	
-	
-	
-	
+	cout << "\nExercise 4"; //formatting
+ 	string DNA; //setting variable
+  	cout << "\nEnter DNA sequence: " << endl;
+  	getline(cin, DNA);  // Read entire line of DNA sequence
+  	dna_to_rna(DNA); //calls function to convert DNA to RNA	
 	
 	return 0;
 }
@@ -70,16 +66,17 @@ void filterEvens (int myArray[], int index){
         if (myArray[index]%2 == 0)       //if the number is even (divisible by 2)
             cout << myArray[index] << " ";
 }
-void dna_to_rna (string DNA){
-    char character;
-    if (character = 'A')
-	cout << "U";
-	if (character = 'C')
-	cout << "G";
-	if (character = 'G')
-	cout << "C";
-	if (character = 'T')
-	cout << "A";
+
+void dna_to_rna(const string& DNA) { //Constant reference to DNA
+    for (int list = 0; list < DNA.length(); list++) { //runs for as many components there are in DNA
+        if (DNA[list] == 'A') //A outputs as "U"
+            cout << "U";
+         else if (DNA[list] == 'C') //C outputs as "G"
+            cout << "G";
+         else if (DNA[list] == 'G') //G outputs as "c"
+            cout << "C";
+         else if (DNA[list] == 'T') //T outputs as "A"
+            cout << "A";
 }
 /*
 Exercise 1
