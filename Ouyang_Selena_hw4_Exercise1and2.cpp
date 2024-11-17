@@ -48,7 +48,7 @@ int main() {
 	    cout << "\nSalesperson #" << maxSeller << " sold " << cars[maxSeller] << " cars" << endl << endl; //outputs cars sold by best salesperson
    
 	
-	
+	//Excercise 4 work when I put it in the same file for some reason >:(. Please run the other file "Ouyang_Selena_hw4_Exercise4.cpp". Thank you so much and sorry for the inconvenience! 
 	cout << "\nExercise 4"; //formatting
  	string DNA; //setting variable
   	cout << "\nEnter DNA sequence: " << endl;
