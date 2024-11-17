@@ -75,7 +75,7 @@ void dna_to_rna(const string& DNA) { //Constant reference to DNA
             cout << "C";
          else if (DNA[list] == 'T') //T outputs as "A"
             cout << "A";
-}
+	}
 }
 /*
 Exercise 1
