@@ -28,8 +28,6 @@ int main() {
 	filterEvens (myArray, index); //calls void function using myArray and index for the parameters
 	
 	
-	
-	
 	cout << "\nExercise 2";
 	int totalCars, i;
 	int maxSeller = 0; //assumes saleperson #1 sold the most cars
@@ -78,6 +76,7 @@ void dna_to_rna(const string& DNA) { //Constant reference to DNA
          else if (DNA[list] == 'T') //T outputs as "A"
             cout << "A";
 }
+}
 /*
 Exercise 1
 Enter 8 values: 
@@ -91,5 +90,8 @@ Exercise 2
 Total number of cars sold at the entire dealership: 58
 Salesperson #4 sold the most cars
 Salesperson #4 sold 14 cars
+
+Exercise 4 
+
 
 */
