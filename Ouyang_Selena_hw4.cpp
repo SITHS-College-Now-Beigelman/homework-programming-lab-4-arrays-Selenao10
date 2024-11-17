@@ -9,7 +9,7 @@ using namespace std;
 
 //Function prototype
 void filterEvens (int myArray[], int index); 
-
+void dna_to_rna (string nucleotides);
 
 int main() { 
     
@@ -20,31 +20,41 @@ int main() {
 	cout << "Enter 8 values: " << endl;
 	
 	for (index = 0; index < 8; index++) //runs for eight values
-	    cin >> myArray[index];
+	    cin >> myArray[index]; //user input into array 
     
-    cout << "\nEven Number(s): " << endl;
+    cout << "\nEven Number(s): " << endl << endl << endl;
     
 	filterEvens (myArray, index); //calls void function using myArray and index for the parameters
 	
 	
 	
 	
-	cout << endl << endl << "\nExercise 2";
-	
-	int totalCars, i, maxSeller = 1; //assigns salesperson who sold the most cars to saleperson #1
+	cout << "\nExercise 2";
+	int totalCars, i;
+	int maxSeller = 0; //assumes saleperson #1 sold the most cars
 
-	int cars[10] = {7, 3, 6, 0, 14, 8, 1, 2, 9, 8};
+	int cars[10] = {7, 3, 6, 0, 14, 8, 1, 2, 9, 8}; //declares an array to store the number of cars sold by each salesperson
 	
-
-	for (i = 1; i < 10; i++)
+    
+	for (i = 0; i < 10; i++){ //runs for the ten components
+	
 	    totalCars += cars[i]; //update the total # of cars by adding together all the cars sold by the salespeople
-	    cout << "\nTotal number of cars sold at the entire dealership: " << totalCars;
-	    
-	if (cars[maxSeller] < cars[i])
-	    maxSeller = i;
-	    cout << "\nSalesperson #" << i << " sold the most cars";
-	    cout << "\nSalesperson #" << i << " sold " << cars[i] << " cars";
+	        
+	        if (cars[maxSeller] < cars[i]) //if value of car[i] is greater than the current maxSeller
+	            maxSeller = i; //updates values of maxSeller to i 
+	}
+	
+	    cout << "\nTotal number of cars sold at the entire dealership: " << totalCars; //outputs total cars sold
+	    cout << "\nSalesperson #" << maxSeller << " sold the most cars"; //outputs the best salesperson
+	    cout << "\nSalesperson #" << maxSeller << " sold " << cars[maxSeller] << " cars" << endl << endl; //outputs cars sold by best salesperson
    
+	
+	
+	cout <<"\nExercise 4";
+	string DNA;
+	cin >> DNA;
+	dna_to_rna (DNA);
+	
 	
 	
 	
@@ -60,6 +70,17 @@ void filterEvens (int myArray[], int index){
         if (myArray[index]%2 == 0)       //if the number is even (divisible by 2)
             cout << myArray[index] << " ";
 }
+void dna_to_rna (string DNA){
+    char character;
+    if (character = 'A')
+	cout << "U";
+	if (character = 'C')
+	cout << "G";
+	if (character = 'G')
+	cout << "C";
+	if (character = 'T')
+	cout << "A";
+}
 /*
 Exercise 1
 Enter 8 values: 
@@ -70,8 +91,8 @@ Even Number(s):
 
 
 Exercise 2
-Total number of cars sold at the entire dealership: 51
-Salesperson #10 sold the most cars
-Salesperson #10 sold -933324800 cars
+Total number of cars sold at the entire dealership: 58
+Salesperson #4 sold the most cars
+Salesperson #4 sold 14 cars
 
 */
